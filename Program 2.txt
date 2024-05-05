@@ -1,0 +1,29 @@
+Program to swap two element without using third element:
+
+import java.util.Arrays;
+
+public class RW {
+
+
+
+    public static void main(String[] args) {
+
+
+
+        int a=5;
+        int b=10;
+
+//      a=a+b;
+//      b=a-b;
+//      a=a-b;
+
+         a=a^b;
+         b=a^b;
+         a=a^b;
+
+        System.out.println("a="+a+" "+"b="+b);
+
+
+
+    }
+}
