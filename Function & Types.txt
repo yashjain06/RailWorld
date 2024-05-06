@@ -1,0 +1,19 @@
+FUNCTION:
+In order to define a function in Java, you use the keyword "public" (or "private" or "protected") followed by the return type of the function, then the name of the function, and finally a set of parentheses containing any parameters the function may take.
+
+Advantage of Function:
+
+Code Reusability
+Code Optimization 
+
+There are two types of methods in Java:
+
+1. Predefined Method
+In Java, predefined methods are the method that is already defined in the Java class libraries is known as predefined methods. It is also known as the standard library method or built-in method. We can directly use these methods just by calling them in the program at any point. 
+
+2. User-defined Method
+The method written by the user or programmer is known as a user-defined method. These methods are modified according to the requirement.
+
+public void sayHello() {  
+  System.out.println("Hello, world!");  
+}  

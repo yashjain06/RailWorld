@@ -1,0 +1,32 @@
+A ternary operator evaluates the test condition and executes a block of code based on the result of the condition.
+In Java, the ternary operator can be used to replace certain types of if...else statements. 
+
+It is also possible to use one ternary operator inside another ternary operator. It is called the nested ternary operator in Java.
+
+Its syntax is:
+condition ? expression1 : expression2;
+
+Here, condition is evaluated and if condition is true, expression1 is executed.
+And, if condition is false, expression2 is executed.
+The ternary operator takes 3 operands (condition, expression1, and expression2). Hence, the name ternary operator.
+
+Example:
+
+public class NestedTernaryExample {
+    public static void main(String[] args) {
+        int number = 10;
+
+        // Nested ternary operator to check if a number is divisible by 2, 3, or neither
+        String result = (number % 2 == 0) ? ((number % 3 == 0) ? "Divisible by both 2 and 3" : "Divisible by 2 only") : ((number % 3 == 0) ? "Divisible by 3 only" : "Not divisible by either 2 or 3");
+
+        System.out.println("The number " + number + " is " + result + ".");
+    }
+}
+
+
+Output: The number 10 is Divisible by 2 only.
+
+
+
+
+
