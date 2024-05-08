@@ -1,0 +1,130 @@
+public class School {
+    private int ClassName;
+
+    private String Section;
+    private boolean holiday;
+
+    public int getClassName() {
+        return ClassName;
+    }
+
+    public void setClassName(int className) {
+        ClassName = className;
+    }
+
+    public String getSection() {
+        return Section;
+    }
+
+    public void setSection(String section) {
+        Section = section;
+    }
+
+    public boolean isHoliday() {
+        return holiday;
+    }
+
+    public void setHoliday(boolean holiday) {
+        this.holiday = holiday;
+    }
+
+    public School(int className, String section, boolean holiday) {
+        ClassName = className;
+        Section = section;
+        this.holiday = holiday;
+    }
+
+
+    @Override
+    public String toString() {
+        return "School{" +
+                "ClassName=" + ClassName +
+                ", Section='" + Section + '\'' +
+                ", holiday=" + holiday +
+                '}';
+    }
+}
+
+public class Student {
+    private int rollno;
+    private School school;
+
+    public int getRollno() {
+        return rollno;
+    }
+
+    public void setRollno(int rollno) {
+        this.rollno = rollno;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollno=" + rollno +
+                ", school=" + school +
+                '}';
+    }
+
+    public Student(int rollno, School school) {
+        this.rollno = rollno;
+        this.school = school;
+    }
+
+}
+
+public class Subject {
+    private String name;
+    private  Student student;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "name='" + name + '\'' +
+                ", student=" + student +
+                '}';
+    }
+
+    public Subject(String name, Student student) {
+        this.name = name;
+        this.student = student;
+    }
+
+}
+
+public class ThreeCombo {
+    public static void main(String[] args) {
+        School school = new School(4,"A",true);
+        Student student= new Student(40,school);
+        Subject subject= new Subject("Maths",student);
+        System.out.println(student);
+        System.out.println(subject);
+        System.out.println(school);
+
+
+
+    }
+}
