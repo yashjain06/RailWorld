@@ -1,0 +1,57 @@
+package comp;
+
+public class Student implements Comparable<Student> {
+
+    int marks;
+
+
+    public Student(int marks) {
+        this.marks = marks;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
+
+    @Override
+    public int compareTo(Student o) {
+         if(marks==o.marks){
+             return 0;
+         }
+         else if(marks>o.marks){
+             return 1;
+         }
+         else{
+             return -1;
+         }
+
+
+    }
+}
+package comp;
+
+import java.util.Scanner;
+
+public class Driver {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+         Student s= new Student(sc.nextInt());
+         Student s1= new Student(sc.nextInt());
+            if(s.compareTo(s1)==0){
+                System.out.println("Equal");
+            }
+            else if(s.compareTo(s1)==1){
+                System.out.println("Higher");
+            }
+            else {
+                System.out.println("Less");
+            }
+
+
+    }
+}
