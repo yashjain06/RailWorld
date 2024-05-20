@@ -28,7 +28,8 @@ public class Com {
 
           Scanner sc= new Scanner(System.in);
 
-        String s1 = sc.nextLine(); String s2 = sc.nextLine();
+        String s1 = sc.nextLine();
+ String s2 = sc.nextLine();
 
        Alpha.verboseCompare(s1, s2);
         Alpha.verboseCompare(s2, s1);
