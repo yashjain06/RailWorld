@@ -1,0 +1,40 @@
+package RW;
+
+public class Alpha {
+    public static void verboseCompare(String s1, String s2){
+        System.out.println("Comparing \"" + s1 + "\" to \"" + s2 + "\"...");
+
+        int comparisonResult = s1.compareTo(s2);
+        System.out.println("The result of the comparison was " + comparisonResult);
+
+        System.out.print("This means that \"" + s1 + "\" ");
+        if(comparisonResult < 0){
+            System.out.println("lexicographically precedes \"" + s2 + "\".");
+        }else if(comparisonResult > 0){
+            System.out.println("lexicographically follows \"" + s2 + "\".");
+        }else{
+            System.out.println("equals \"" + s2 + "\".");
+        }
+        System.out.println();
+    }
+}
+
+package RW;
+
+import java.util.Scanner;
+
+public class Com {
+    public static void main(String args[]){
+
+          Scanner sc= new Scanner(System.in);
+
+        String s1 = sc.nextLine(); String s2 = sc.nextLine();
+
+       Alpha.verboseCompare(s1, s2);
+        Alpha.verboseCompare(s2, s1);
+        Alpha.verboseCompare(s1, s1);
+    }
+
+
+}
+
